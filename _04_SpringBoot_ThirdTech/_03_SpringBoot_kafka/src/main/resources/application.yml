@@ -1,0 +1,54 @@
+server:
+  port: 8085
+spring:
+  aop:
+    proxy-target-class=true
+  kafka:
+
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      acks: all
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    consumer:
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      auto-commit-interval: "1000"
+      group-id: "server-consumer-001"
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    admin:
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      timeout: 1000
+
+logging:
+  level:
+    # 设定日志输出级别
+    root: info
+    hui: info
+    kafka: warn
+    kafkaNetWork: error
+  group:
+    hui: com.hui
+    kafka: org.apache.kafka.clients
+    kafkaNetWork: org.apache.kafka.clients.NetworkClient
+  charset:
+    console: UTF-8
+    file: UTF-8
+  file:
+    name: log/huiServer.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10KB
+      file-name-pattern: log/%d{yyyy-MM}/huiServer.%d{yy-MM-dd}.%i.log
+      max-history: 3
+
+thread:
+  pool:
+    corePoolSize: 20
+    maxPoolSize: 20
+    keepAliveSeconds: 300
+    queueCapacity: 50
+    threadName: "threadPool"

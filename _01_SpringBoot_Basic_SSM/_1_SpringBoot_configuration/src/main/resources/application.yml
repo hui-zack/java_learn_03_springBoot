@@ -1,0 +1,45 @@
+# 多环境开发
+
+spring:               ## 设定启用的默认环境
+  profiles:
+    active: dev      # 4-2 读取pom文件的环境参数
+---
+## 2-1 开发环境
+spring:
+  profiles: dev
+server:
+  port: 8085
+---
+
+## 2-2 测试环境
+spring:
+  profiles: test  #
+
+server:
+  port: 8086
+
+---
+
+## 2-3 生产环境
+spring:
+  profiles: pro
+
+server:
+  port: 8080
+
+---
+# 公共配置
+
+# 日志级别
+logging:
+  level:
+    root: info
+
+test.config:
+    name: hui
+    age: 16
+    classArray:
+      - java
+      - python
+      - vue
+      -

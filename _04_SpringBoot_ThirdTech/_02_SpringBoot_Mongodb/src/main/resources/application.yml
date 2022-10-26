@@ -1,0 +1,8 @@
+server:
+  port: 8085
+# 1-2 配置mongodb连接地址
+spring:
+  data:
+    mongodb:
+      # mongodb数据库连接地址, 连接到hui数据库
+      uri: mongodb://localhost/hui

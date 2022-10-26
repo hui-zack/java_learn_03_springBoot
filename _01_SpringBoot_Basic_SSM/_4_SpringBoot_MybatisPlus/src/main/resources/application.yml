@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mybatis?serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+# 服务器端口
+server:
+  port: 8085
+
+# 日志级别
+logging:
+  level:
+    root: info
+
+# 0-4 开启mybatisPlus运行日志到控制台
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  global-config:
+    db-config:
+      # 0-6-2 配置全部表的默认id生成策略
+      id-type: auto
+      # 6-2-1 配置所有表添加逻辑删除
+      logic-delete-field: deleted   # 所有表添加逻辑删除字段为deleted
+      logic-delete-value: 0         # 所有表的逻辑删除功能中, 未删除状态=0
+      logic-not-delete-value: 1     # 所有表的逻辑删除功能中, 已删除状态=1
+    banner: off
+

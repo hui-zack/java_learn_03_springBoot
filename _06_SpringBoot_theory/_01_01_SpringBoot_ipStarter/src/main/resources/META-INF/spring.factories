@@ -1,0 +1,4 @@
+
+# 1-2 创建自动配置文件夹和文件
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.hui.autoConfig.IpAutoConfiguration
