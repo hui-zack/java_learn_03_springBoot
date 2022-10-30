@@ -38,7 +38,7 @@
         keytool -delete -alias tomcat -keystore cacerts
                 
 ## CAS服务器的下载和安装
-[cas war包下载]
+[cas-server 源码下载]
     [下载CAS server的代码](https://github.com/apereo/cas-overlay-template)
 
     5.3之后的版本为java1.8以上, 所以请下载5.3.xx
@@ -62,7 +62,7 @@
     注意: 必须复制过来, 否则打包(package)的时候所作的修改会被覆盖!
     
 [cas服务器使用数据库]
-    
+
     pom添加数据库依赖:
         <dependencies>
             <dependency>
