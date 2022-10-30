@@ -1,0 +1,13 @@
+server:
+  port: 7777
+
+
+# 1-3 在yml文件配置服务器验证地址
+cas:
+  server-url-prefix: http://localhost:10086/cas
+  server-login-url: http://localhost:10086/cas/login
+  client-host-url: http://localhost:7777
+
+  validation-type: CAS3
+
+

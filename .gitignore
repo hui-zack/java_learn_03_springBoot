@@ -8,3 +8,5 @@ HELP.md
 mvnw.cmd
 mvnw
 log/
+*.zip
+*.rar
