@@ -17,7 +17,7 @@ import java.util.Map;
 
 /* 1-2 在项目启动类上添加开关注解并指定使用casServer数据源 */
 //@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableCasClient
+//@EnableCasClient
 @SpringBootApplication
 public class SpringbootCasApplication {
     public static void main(String[] args) {

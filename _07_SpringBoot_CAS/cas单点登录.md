@@ -94,7 +94,4 @@
     [1-1 服务添加cas-client依赖](pom.xml)
     [1-2 在项目启动类上添加开启cas-client注解](./src/main/java/com/hui/SpringbootCasApplication.java)
     [1-3 在yml文件配置服务器验证地址](./src/main/resources/application.yml)
-
-    
-    
-    
+    [1-4 配置文件设置是否开启cas登录](./src/main/java/com/hui/config/cas/CasClientConfig.java)
