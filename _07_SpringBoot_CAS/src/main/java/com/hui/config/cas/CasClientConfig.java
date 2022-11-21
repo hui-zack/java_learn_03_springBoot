@@ -9,6 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
 import javax.servlet.Filter;
@@ -41,7 +42,7 @@ public class CasClientConfig {
      */
 
     private String clientHostUrl;
-    
+
     @Autowired
     private LoginConfig loginConfig;
 
