@@ -24,5 +24,4 @@ public class MybatisPlusConfig {
 //        mybatisPlusInterceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
         return mybatisPlusInterceptor;
     }
-
 }
